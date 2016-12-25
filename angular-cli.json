@@ -18,9 +18,13 @@
         "mobile": false,
         "styles": [
             "../node_modules/normalize.css/normalize.css",
+            "assets/plugins/Semantic-UI/semantic.min.css",
             "styles.scss"
         ],
-        "scripts": [],
+        "scripts": [
+            "../node_modules/jquery/dist/jquery.min.js",
+            "assets/plugins/Semantic-UI/semantic.min.js"
+        ],
         "environments": {
             "source": "environments/environment.ts",
             "dev": "environments/environment.ts",
