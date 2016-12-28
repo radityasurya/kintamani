@@ -1,0 +1,97 @@
+@import '~assets/mixins/include-media';
+.site-wrap {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    background: #292929;
+    .site-canvas {
+        position: relative;
+        z-index: 8888;
+        transition: all .5s ease;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        transform: none;
+        overflow: hidden;
+        background: #292929;
+        @include media(">=phone", "<=tablet") {
+            padding-left: 0;
+            padding-top: 50px;
+        }
+        padding-top: 0;
+        padding-left: 80px;
+        main {
+            padding: 0;
+            height: 100%;
+            background: #292929;
+            -webkit-transform: none;
+            -moz-transform: none;
+            -ms-transform: none;
+            transform: none;
+            -webkit-transition: .3s ease all;
+            -moz-transition: .3s ease all;
+            transition: .3s ease all;
+        }
+    }
+}
+
+.site-nav {
+    position: fixed;
+    width: 80px;
+    height: 100%;
+    background: #fff;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    box-shadow: 5px 10px 15px 5px rgba(0, 0, 0, .05);
+    .site-logo {
+        a {
+            padding: 20px;
+            background: #f56462;
+            transition: all .3s;
+            &:hover {
+                -webkit-transition: color .3s ease-in-out;
+                transition: color .3s ease-in-out;
+                background: darken(#f56462, 5%);
+            }
+        }
+        &__img {
+            width: 80px;
+            height: 80px;
+        }
+    }
+    &__list {
+        margin: 0!important;
+        li {
+            padding: 0;
+        }
+    }
+    &__link {
+        display: block;
+        padding: 22px;
+        transition: all .24s;
+        border-bottom: 1px solid #f56462;
+        &:hover {
+            background: darken(#fff, 5%);
+            ;
+        }
+    }
+    @include media(">=phone", "<=tablet") {
+        height: 50px;
+        width: 100%;
+        .site-logo {
+            a {
+                padding: 15px;
+                background: #f56462;
+                &:hover {
+                    background: darken(#f56462, 8%);
+                }
+            }
+            &__img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+        &__list {}
+    }
+}
